@@ -9,7 +9,9 @@ public class ZipCodeWilmington {
     private List<Student> students = new ArrayList<>();
 
     public void enroll(Student student) {
-        this.students.add(student);
+        if (!this.students.contains(student)) {
+            this.students.add(student);
+        }
     }
 
     public Boolean isEnrolled(Student student) {
